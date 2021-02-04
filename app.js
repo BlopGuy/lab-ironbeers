@@ -22,4 +22,20 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/beers', (req, res) => {
+  const ironhack = new Promise(function(resolve, reject) {
+    if (/* condition */) {
+       resolve(/* value */);  // fulfilled successfully
+    }
+    else {
+       reject(/* reason */);  // error, rejected
+    }
+ });
+  res.render('beers');
+});
+
+app.get('/random-beers', (req, res) => {
+  res.render('random-beers');
+});
+
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
